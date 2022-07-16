@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dry:run": "semantic-release --dry-run --no-ci",
+    "dry:run": "cross-env GITHUB_TOKEN=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 semantic-release --dry-run --no-ci",
+    "s:release": "cross-env GITHUB_TOKEN=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 semantic-release --no-ci",
     "release": "npx gh release create v7.1 --title 'v7.1' --notes 'testing script'",
     "test": "echo \"Error: no test specified\""
   },
@@ -18,5 +19,8 @@
     "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
     "semantic-release": "^19.0.3"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
   }
 }
