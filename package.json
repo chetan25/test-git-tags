@@ -1,11 +1,11 @@
 {
   "name": "git-practice",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dry:run": "cross-env GITHUB_TOKEN=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 semantic-release --dry-run --no-ci",
-    "s:release": "cross-env GITHUB_TOKEN=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 semantic-release --no-ci",
+    "dry:run": "cross-env GITHUB_TOKEN=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 semantic-release --dry-run --no-ci",
+    "s:release": "cross-env GITHUB_TOKEN=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 semantic-release --no-ci",
     "release": "npx gh release create v7.1 --title 'v7.1' --notes 'testing script'",
     "test": "echo \"Error: no test specified\""
   },
