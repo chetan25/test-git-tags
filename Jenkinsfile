@@ -1,6 +1,8 @@
 pipeline {
     agent any
 
+    tools {nodejs "node"}
+
     stages {
         stage('Hello') {
             steps {
@@ -9,6 +11,7 @@ pipeline {
                         echo 'This is not master or staging'
                     } else {
                         echo 'things and stuff'
+                        sh 'npm run test'
                     }
                 }
             }
