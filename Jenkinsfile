@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    tools {nodejs "node"}
+    tools {nodejs "Node"}
 
     stages {
         stage('Hello') {
@@ -9,9 +9,9 @@ pipeline {
                script { 
                     if (env.BRANCH_NAME != 'master' && env.BRANCH_NAME != 'staging') {
                         echo 'This is not master or staging'
+                        sh 'npm run test'
                     } else {
                         echo 'things and stuff'
-                        sh 'npm run test'
                     }
                 }
             }
