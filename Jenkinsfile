@@ -2,11 +2,11 @@ pipeline {
    agent any
 
    stages {
-    stage("build") {
-        steps {
-            echo "Testing this Jenkins"
+        stage("build") {
+            steps {
+                echo "Testing this Jenkins"
+            }
         }
-    }
    }
 
    post {
