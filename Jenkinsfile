@@ -1,20 +1,19 @@
 pipeline {
-   agent any
+    agent any
 
-   stages {
-        stage("build") {
+    tools {nodejs "node"}
+
+    stages {
+        stage('Hello') {
             steps {
-                echo "Testing this Jenkins"
+               script { 
+                    if (env.BRANCH_NAME != 'master' && env.BRANCH_NAME != 'staging') {
+                        echo 'This is not master or staging'
+                    } else {
+                        echo 'things and stuff'
+                    }
+                }
             }
         }
-   }
-
-   post {
-        always {
-
-        }
-        success {
-            echo "Successfully done"
-        }
-   } 
+    }
 }
