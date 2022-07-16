@@ -1,5 +1,6 @@
 hello
 world
+Hi!!
 
 
 npm i -D semantic-release @semantic-release/{git,commit-analyzer,release-notes-generator,npm,changelog}
