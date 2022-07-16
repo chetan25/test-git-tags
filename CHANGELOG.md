@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.0.2](https://github.com/chetan25/test-git-tags/compare/v1.0.1...v1.0.2) (2022-07-16)
+
+
+### Bug Fixes
+
+* **update:** updated config ([ee00e00](https://github.com/chetan25/test-git-tags/commit/ee00e00373a06acb9355415c7fd89f4652891a45))
+
 ## [1.0.1](https://github.com/chetan25/test-git-tags/compare/v1.0.0...v1.0.1) (2022-07-16)
 
 
