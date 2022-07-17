@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
+               git url: "https://github.com/chetan25/test-git-tags.git", branch: 'main'
                script { 
-                    sh 'git branch: 'main', url: "https://github.com/chetan25/test-git-tags.git"'
                     echo 'Starting Release'
                     sh 'npm ci'
                     sh 'npm run s:release'
