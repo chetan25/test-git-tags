@@ -1,0 +1,29 @@
+name: Upload
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  # updates index.html:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - run: npm ci
+
+  release:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Release a new version
+        run: npm run s:release
