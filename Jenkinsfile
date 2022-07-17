@@ -9,7 +9,6 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-               git url: "https://github.com/chetan25/test-git-tags.git", branch: 'main'
                script { 
                     echo 'Starting Release'
                     sh 'npm ci'
