@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
+               git checkout main 
                script { 
                     echo 'Starting Release'
                     sh 'npm ci'
