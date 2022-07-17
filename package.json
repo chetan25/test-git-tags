@@ -4,8 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dry:run": "cross-env GITHUB_TOKEN=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 semantic-release --dry-run --no-ci",
-    "s:release": "cross-env GITHUB_TOKEN=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 semantic-release --no-ci",
     "release": "npx gh release create v7.1 --title 'v7.1' --notes 'testing script'",
     "test": "echo \"Error: no test specified\""
   },
