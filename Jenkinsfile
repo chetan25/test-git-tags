@@ -11,6 +11,7 @@ pipeline {
             steps {
                script { 
                     echo 'Starting Release'
+                    sh 'npm ci'
                     sh 'npm run s:release'
                 }
             }
