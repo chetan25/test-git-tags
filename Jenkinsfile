@@ -15,6 +15,7 @@ pipeline {
                         sh 'npm run s:release'
                     } else {
                         echo 'things and stuff'
+                        echo env.BRANCH_NAME
                     }
                 }
             }
