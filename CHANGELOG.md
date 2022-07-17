@@ -1,5 +1,19 @@
 # Semantic Versioning Changelog
 
+## [1.1.1](https://github.com/chetan25/test-git-tags/compare/v1.1.0...v1.1.1) (2022-07-17)
+
+
+### Bug Fixes
+
+* fixed action ([a7e85d5](https://github.com/chetan25/test-git-tags/commit/a7e85d58598186a3bf00a2933b411575e5130c8f))
+* updated jenkins file ([62da558](https://github.com/chetan25/test-git-tags/commit/62da558526768d34a3e8da6228f99a2451149a63))
+* updated jenkins file ([15ba203](https://github.com/chetan25/test-git-tags/commit/15ba203a49882bee17febec31f7f2284afe58117))
+* updated jenkins file ([540f65b](https://github.com/chetan25/test-git-tags/commit/540f65beef892a5b8a20bb6bf592408c270cd0e6))
+* updated jenkins file ([447fbd1](https://github.com/chetan25/test-git-tags/commit/447fbd174288f9d0a561a161f17133f4eb7ef542))
+* updated jenkins file ([f3d3f17](https://github.com/chetan25/test-git-tags/commit/f3d3f17093c8b2a5b40835f3f6d83561ab66caee))
+* updated workflow ([a71d536](https://github.com/chetan25/test-git-tags/commit/a71d536cd3db96de50ef6c70a1374f16761fcb2b))
+* **updated:** updated jenkins ([9a68b58](https://github.com/chetan25/test-git-tags/commit/9a68b5893c69057eef6b45ac10b17e873c01a569))
+
 # [1.1.0](https://github.com/chetan25/test-git-tags/compare/v1.0.4...v1.1.0) (2022-07-17)
 
 
