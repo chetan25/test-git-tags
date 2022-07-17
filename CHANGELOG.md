@@ -1,5 +1,13 @@
 # Semantic Versioning Changelog
 
+# [1.1.0](https://github.com/chetan25/test-git-tags/compare/v1.0.4...v1.1.0) (2022-07-17)
+
+
+### Features
+
+* **workflow:** added workflow ([287cbed](https://github.com/chetan25/test-git-tags/commit/287cbed711c09e9456862932d17d432e53ad86a2))
+* **workflow:** added workflow ([179c22c](https://github.com/chetan25/test-git-tags/commit/179c22c7bcdc443396aa248574498313064f3660))
+
 ## [1.0.4](https://github.com/chetan25/test-git-tags/compare/v1.0.3...v1.0.4) (2022-07-17)
 
 
