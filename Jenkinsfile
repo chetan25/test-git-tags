@@ -11,7 +11,7 @@ pipeline {
             steps {
                script { 
                     echo 'Starting Release'
-                    echo $Version
+                    echo ${params.Version}
                     sh 'gh release list'
                     sh 'npm ci'
                     sh 'npm run s:release'
