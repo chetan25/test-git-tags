@@ -1,9 +1,11 @@
 {
   "name": "git-practice",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dry:run": "dotenv cross-var cross-env GITHUB_TOKEN=%GITHUB_TOKEN% semantic-release --dry-run --no-ci",
+    "s:release": "dotenv cross-var cross-env GITHUB_TOKEN=%GITHUB_TOKEN% semantic-release --no-ci",
     "release": "npx gh release create v7.1 --title 'v7.1' --notes 'testing script'",
     "test": "echo \"Error: no test specified\""
   },
@@ -16,6 +18,8 @@
     "@semantic-release/github": "^8.0.5",
     "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
+    "cross-var": "^1.1.0",
+    "dotenv-cli": "^6.0.0",
     "semantic-release": "^19.0.3"
   },
   "dependencies": {
