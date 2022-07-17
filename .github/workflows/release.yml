@@ -21,5 +21,5 @@ jobs:
         with:
           fetch-depth: 0
       - run: npm ci
-      - name: Release a new version
-        # run: npm run s:release
+      # - name: Release a new version
+      # run: npm run s:release
