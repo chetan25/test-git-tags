@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.1.2](https://github.com/chetan25/test-git-tags/compare/v1.1.1...v1.1.2) (2022-07-17)
+
+
+### Bug Fixes
+
+* Updated Jenkins ([cf6f461](https://github.com/chetan25/test-git-tags/commit/cf6f4617d05581dffe35f9f8a97a4e2f6d482657))
+
 ## [1.1.1](https://github.com/chetan25/test-git-tags/compare/v1.1.0...v1.1.1) (2022-07-17)
 
 
