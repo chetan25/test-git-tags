@@ -3,11 +3,11 @@ pipeline {
 
     tools {nodejs "Node"}
 
+    environment: {
+        GITHUB_TOKEN = credentials('jenkins-git')
+    }
     stages {
         stage('Hello') {
-            environment: {
-                GITHUB_TOKEN = credentials('jenkins-git')
-            }
             steps {
                script { 
                     if (env.BRANCH_NAME === 'main' && env.BRANCH_NAME != 'staging') {
