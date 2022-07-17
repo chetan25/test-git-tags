@@ -3,6 +3,7 @@
   "ci": false,
   "branches": [
     "main",
+    "origin/main",
     "next"
   ],
   "plugins": [
