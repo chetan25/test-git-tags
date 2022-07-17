@@ -10,12 +10,8 @@ pipeline {
         stage('Hello') {
             steps {
                script { 
-                    if (env.BRANCH_NAME == 'main' && env.BRANCH_NAME != 'staging') {
-                        echo 'This is not master or staging'
-                        sh 'npm run s:release'
-                    } else {
-                        echo 'things and stuff'
-                    }
+                    echo 'Starting Release'
+                    sh 'npm run s:release'
                 }
             }
         }
