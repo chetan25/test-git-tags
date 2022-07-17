@@ -11,7 +11,6 @@ pipeline {
             steps {
                script { 
                     echo 'Starting Release'
-                    sh 'brew install gh'
                     sh 'gh release list'
                     sh 'npm ci'
                     sh 'npm run s:release'
