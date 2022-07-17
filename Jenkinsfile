@@ -3,7 +3,7 @@ pipeline {
 
     tools {nodejs "Node"}
 
-    environment: {
+    environment {
         GITHUB_TOKEN = credentials('jenkins-git')
     }
     stages {
