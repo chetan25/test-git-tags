@@ -6,6 +6,7 @@ pipeline {
 
     environment {
         GITHUB_TOKEN = credentials('jenkins-git')
+        JENKINS_REMOTE_USER = 
     }
     stages {
         stage('Hello') {
@@ -26,8 +27,8 @@ pipeline {
         stage('Trigger Job') {
             steps {
                 echo 'Triggering remote script to execute job'
-                script {
-                    sh 'curl http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234&VERSION=2.1'
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId:'jenkins-remote', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
+                   sh 'sh curl -u $USERNAME:$PASSWORD http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234&VERSION=2.1'
                 }
             }
         }
