@@ -23,9 +23,12 @@ pipeline {
                 sh "echo ${BUILD_TAG}"
             }
         }
-        stage('Test') {
+        stage('Trigger Job') {
             steps {
-                echo 'Testing..'
+                echo 'Triggering remote script to execute job'
+                script {
+                    sh 'curl http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234&VERSION=2.1'
+                }
             }
         }
     }
