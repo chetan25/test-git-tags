@@ -14,11 +14,13 @@ pipeline {
                     echo 'Starting Release'
                     sh "echo ${params.Version}"
                     sh 'gh release list'
+                    sh 'gh release list -L 1'
                     sh "gh release list -L 1 > env.BUILD_TAG"
                     sh "echo ${env.BUILD_TAG}"
                     // sh 'npm ci'
                     // sh 'npm run s:release'
                 }
+                sh "echo ${env.BUILD_TAG}"
             }
         }
         stage('Test') {
