@@ -15,7 +15,7 @@ pipeline {
                     sh "echo ${params.Version}"
                     sh 'gh release list'
                     sh 'gh release list -L 1'
-                    sh "gh release list -L 1 > env.BUILD_TAG"
+                    BUILD_TAG = sh(returnStdout: true, script: 'gh release list -L 1')
                     sh "echo ${env.BUILD_TAG}"
                     // sh 'npm ci'
                     // sh 'npm run s:release'
