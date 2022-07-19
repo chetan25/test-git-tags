@@ -6,7 +6,6 @@ pipeline {
 
     environment {
         GITHUB_TOKEN = credentials('jenkins-git')
-        JENKINS_REMOTE_USER = 
     }
     stages {
         stage('Hello') {
