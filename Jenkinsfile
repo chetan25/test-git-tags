@@ -5,6 +5,7 @@ pipeline {
 
     environment {
         GITHUB_TOKEN = credentials('jenkins-git')
+        BUILD_TAG = ''
     }
     stages {
         stage('Hello') {
@@ -13,8 +14,10 @@ pipeline {
                     echo 'Starting Release'
                     sh "echo ${params.Version}"
                     sh 'gh release list'
-                    sh 'npm ci'
-                    sh 'npm run s:release'
+                    sh "gh release list -L 1 > BUILD_TAG"
+                    sh "echo ${BUILD_TAG}"
+                    // sh 'npm ci'
+                    // sh 'npm run s:release'
                 }
             }
         }
