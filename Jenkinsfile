@@ -5,7 +5,7 @@ pipeline {
 
     environment {
         GITHUB_TOKEN = credentials('jenkins-git')
-        BUILD_TAG = ''
+        BUILD_TAG = 'weew'
     }
     stages {
         stage('Hello') {
