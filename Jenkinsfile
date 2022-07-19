@@ -14,8 +14,8 @@ pipeline {
                     echo 'Starting Release'
                     sh "echo ${params.Version}"
                     sh 'gh release list'
-                    sh "gh release list -L 1 > BUILD_TAG"
-                    sh "echo ${BUILD_TAG}"
+                    sh "gh release list -L 1 > env.BUILD_TAG"
+                    sh "echo ${env.BUILD_TAG}"
                     // sh 'npm ci'
                     // sh 'npm run s:release'
                 }
