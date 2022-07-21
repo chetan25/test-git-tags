@@ -1,5 +1,12 @@
 # Semantic Versioning Changelog
 
+## [1.1.5](https://github.com/chetan25/test-git-tags/compare/v1.1.4...v1.1.5) (2022-07-21)
+
+
+### Bug Fixes
+
+* updated sematic release config ([c19c1a5](https://github.com/chetan25/test-git-tags/commit/c19c1a598aca7ee7a9ae79efe5d71dc69472332f))
+
 ## [1.1.4](https://github.com/chetan25/test-git-tags/compare/v1.1.3...v1.1.4) (2022-07-21)
 
 
