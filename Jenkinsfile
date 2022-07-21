@@ -34,7 +34,7 @@ pipeline {
                 sh "echo In Trigger step  ${REPO_LATEST_TAG}"
                 echo 'Triggering remote script to execute job'
                 // sh """curl -X POST -u '$JENKINS_TOKEN_USR:$JENKINS_TOKEN_PSW' http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234 --data 'VERSION=${REPO_LATEST_TAG}' --data 'PR_NAME=${PR_NAME}'"""
-                // sh "curl -X POST -u '$JENKINS_TOKEN_USR:$JENKINS_TOKEN_PSW' http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234 --data 'VERSION=${REPO_LATEST_TAG}' --data 'PR_NAME=${PR_NAME}'"
+                curl -X POST -u '$JENKINS_TOKEN_USR:$JENKINS_TOKEN_PSW' http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234 --data VERSION=${REPO_LATEST_TAG} --data PR_NAME=${PR_NAME}
                 //sh('curl -X POST -u $JENKINS_TOKEN_USR:$JENKINS_TOKEN_PSW http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234 --data VERSION="${REPO_LATEST_TAG}" --data PR_NAME=${PR_NAME}') 
                 withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId:'jenkins-remote', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
                     sh 'echo In Trigger step  "${REPO_LATEST_TAG}"'
