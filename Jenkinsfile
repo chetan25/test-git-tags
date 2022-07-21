@@ -43,8 +43,8 @@ pipeline {
                     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId:'jenkins-remote', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
                         sh 'echo In Trigger step  "${REPO_LATEST_TAG}"'
                         sh 'echo In Trigger step  REPO_LATEST_TAG'
-                        sh "echo path is $URL_PATH"
-                        sh "curl -X POST -u $USERNAME:$PASSWORD $URL_PATH --data VERSION=${REPO_LATEST_TAG}"
+                        sh('echo path is ${URL_PATH}')
+                        //sh "curl -X POST -u $USERNAME:$PASSWORD $URL_PATH --data VERSION=${REPO_LATEST_TAG}"
                         //sh 'curl -X POST -u $USERNAME:$PASSWORD http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234 --data VERSION="${REPO_LATEST_TAG}" --data PR_NAME="${PR_NAME}"'
                     }
                 }
