@@ -21,7 +21,6 @@ pipeline {
                     sh "echo Version is ${value}"
                     sh 'npm ci'
                     sh 'npm run s:release'
-                    sh 'echo ${nextRelease.version}'
                 }
                 sh "echo ${REPO_LATEST_TAG}"
             }
