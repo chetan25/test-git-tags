@@ -33,7 +33,7 @@ pipeline {
         }
         stage('Trigger Job') {
             steps {
-                scritp {
+                script {
                     sh "echo In Trigger step  ${REPO_LATEST_TAG}"
                     echo 'Triggering remote script to execute job'
                     URL_PATH = "http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234&VERSION=${REPO_LATEST_TAG}"
