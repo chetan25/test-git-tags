@@ -1,5 +1,7 @@
 def REPO_LATEST_TAG = 'initial_value'
 def PR_NAME = ''
+def url =''
+
 pipeline {
     agent any
 
@@ -33,7 +35,7 @@ pipeline {
             steps {
                 sh "echo In Trigger step  ${REPO_LATEST_TAG}"
                 echo 'Triggering remote script to execute job'
-                def url = "http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234&VERSION=${REPO_LATEST_TAG}"
+                url = "http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234&VERSION=${REPO_LATEST_TAG}"
                 // sh """curl -X POST -u '$JENKINS_TOKEN_USR:$JENKINS_TOKEN_PSW' http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234 --data 'VERSION=${REPO_LATEST_TAG}' --data 'PR_NAME=${PR_NAME}'"""
                 //sh "curl -X POST -u '$JENKINS_TOKEN_USR:$JENKINS_TOKEN_PSW' http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234 --data VERSION=${REPO_LATEST_TAG} --data PR_NAME=${PR_NAME}"
                 //sh('curl -X POST -u $JENKINS_TOKEN_USR:$JENKINS_TOKEN_PSW http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234 --data VERSION="${REPO_LATEST_TAG}" --data PR_NAME=${PR_NAME}') 
