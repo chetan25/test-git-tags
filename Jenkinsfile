@@ -17,8 +17,9 @@ pipeline {
                     sh 'gh release list -L 1'
                     REPO_LATEST_TAG = sh(returnStdout: true, script: 'gh release list -L 1')
                     sh "echo ${REPO_LATEST_TAG}"
-                    // sh 'npm ci'
-                    // sh 'npm run s:release'
+                    sh 'npm ci'
+                    sh 'npm run s:release'
+                    sh 'echo ${nextRelease.version}'
                 }
                 sh "echo ${REPO_LATEST_TAG}"
             }
