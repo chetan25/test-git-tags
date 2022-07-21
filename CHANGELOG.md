@@ -1,5 +1,17 @@
 # Semantic Versioning Changelog
 
+## [1.1.3](https://github.com/chetan25/test-git-tags/compare/v1.1.2...v1.1.3) (2022-07-21)
+
+
+### Bug Fixes
+
+* fixed jenkins syntax ([03f7c29](https://github.com/chetan25/test-git-tags/commit/03f7c29c4c7ccf3405ff5a64c33de76e2f8c4555))
+* fixed jenkins syntax ([6da5bd1](https://github.com/chetan25/test-git-tags/commit/6da5bd177e97b0475c665852cadb9b86f0808566))
+* updated jenkins ([cdd420c](https://github.com/chetan25/test-git-tags/commit/cdd420cb3d0ab72131975ceb14511c1e8c444034))
+* updated readme and jenkins file ([89f9c38](https://github.com/chetan25/test-git-tags/commit/89f9c389afd29c2723d5859ebd19aad5db930d87))
+* updated the variable button ([b617885](https://github.com/chetan25/test-git-tags/commit/b61788517d7aa9722d2d2830f8737e35a778efeb))
+* updated the variable button ([2eef3ed](https://github.com/chetan25/test-git-tags/commit/2eef3ed761ee77702af3501f18f49371d1d6426a))
+
 ## [1.1.2](https://github.com/chetan25/test-git-tags/compare/v1.1.1...v1.1.2) (2022-07-17)
 
 
