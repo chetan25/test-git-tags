@@ -26,7 +26,7 @@ pipeline {
                     REPO_LATEST_TAG=sh(returnStdout: true, script: 'cat .VERSION')
                     // REPO_LATEST_TAG=2.1
                     sh "echo Version is ${REPO_LATEST_TAG}"
-                    PR_NAME = 'updated-version-${REPO_LATEST_TAG}'
+                    PR_NAME = "updated-version-${REPO_LATEST_TAG}"
                 }
                 sh "echo Latest released version is ${REPO_LATEST_TAG}"
             }
@@ -41,6 +41,7 @@ pipeline {
                     //sh('curl -X POST -u $JENKINS_TOKEN_USR:$JENKINS_TOKEN_PSW http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234 --data VERSION="${REPO_LATEST_TAG}" --data PR_NAME=${PR_NAME}') 
                     withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId:'jenkins-remote', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
                         sh "echo In Trigger step  ${REPO_LATEST_TAG}"
+                        sh "echo In Trigger PRNAME  ${PR_NAME}"
                         //URL_PATH = "-u $USERNAME:$PASSWORD http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234"
                         //sh('echo path is ${URL_PATH}')
                         //sh 'curl -X POST -u' $URL_PATH '--data VERSION=' $REPO_LATEST_TAG '
