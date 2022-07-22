@@ -46,7 +46,7 @@ pipeline {
                         //sh('echo path is ${URL_PATH}')
                         //sh 'curl -X POST -u' $URL_PATH '--data VERSION=' $REPO_LATEST_TAG '
                         // sh "curl -X POST -u $USERNAME:$PASSWORD http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234 --data VERSION=${REPO_LATEST_TAG} --data PR_NAME=${PR_NAME}"
-                        sh """curl -X POST -u $USERNAME:$PASSWORDW http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234 --data 'VERSION=${REPO_LATEST_TAG}' --data 'PR_NAME=${PR_NAME}'"""
+                        sh """curl -X POST -u $USERNAME:$PASSWORD http://localhost:9090/job/TestDraftPR/buildWithParameters?token=1234 --data 'VERSION=${REPO_LATEST_TAG}' --data 'PR_NAME=${PR_NAME}'"""
                     }
                 }
             }
