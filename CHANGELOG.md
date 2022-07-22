@@ -1,5 +1,14 @@
 # Semantic Versioning Changelog
 
+## [1.1.10](https://github.com/[secure]/test-git-tags/compare/v1.1.9...v1.1.10) (2022-07-22)
+
+
+### Bug Fixes
+
+* updated sematic release config ([cc06533](https://github.com/[secure]/test-git-tags/commit/cc0653322dfbd1e35fa0942a9dbdc9231618c4ee))
+* updated sematic release config ([ce6bca4](https://github.com/[secure]/test-git-tags/commit/ce6bca4dcb556b7a31a900508e8cc0d6d0a01cf7))
+* updated sematic release config ([ab12aad](https://github.com/[secure]/test-git-tags/commit/ab12aad361253333f7e6f87bff994674eae2067e))
+
 ## [1.1.9](https://github.com/chetan25/test-git-tags/compare/v1.1.8...v1.1.9) (2022-07-21)
 
 
