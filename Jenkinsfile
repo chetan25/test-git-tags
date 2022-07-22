@@ -21,8 +21,8 @@ pipeline {
                     // sh 'gh release list -L 1'
                     // REPO_LATEST_TAG = sh(returnStdout: true, script: 'gh release list -L 1')
                     sh "echo ${REPO_LATEST_TAG}"
-                    // sh 'npm ci'
-                    // sh 'npm run s:release'
+                    sh 'npm ci'
+                    sh 'npm run s:release'
                     REPO_LATEST_TAG=sh(returnStdout: true, script: 'cat .VERSION')
                     // REPO_LATEST_TAG=2.1
                     sh "echo Version is ${REPO_LATEST_TAG}"
