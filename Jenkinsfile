@@ -12,7 +12,7 @@ pipeline {
         JENKINS_TOKEN = credentials('jenkins-remote')
     }
     stages {
-        stage('Hello') {
+        stage('Release New Version') {
             steps {
                script { 
                     echo 'Starting Release'
@@ -31,7 +31,7 @@ pipeline {
                 sh "echo Latest released version is ${REPO_LATEST_TAG}"
             }
         }
-        stage('Trigger Job') {
+        stage('Trigger Remote Job') {
             steps {
                 script {
                     sh "echo In Trigger step  ${REPO_LATEST_TAG}"
